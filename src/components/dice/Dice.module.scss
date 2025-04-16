@@ -1,0 +1,148 @@
+.rollButton {
+  margin-top: 80px;
+
+  button {
+    padding: 15px 50px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #f4d35e;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 1px 3px #50514f;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover,
+    &:active {
+      background: #50514f;
+      transform: translateY(15px);
+    }
+  }
+}
+
+.dice {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.5s;
+}
+
+.side {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #efefef;
+  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.one {
+  transform: translateZ(3.1em);
+}
+
+.two {
+  transform: rotateY(-180deg) translateZ(3.1em);
+}
+
+.three {
+  transform: rotateY(-90deg) translateZ(3.1em);
+}
+
+.four {
+  transform: rotateX(90deg) translateZ(3.1em);
+}
+
+.five {
+  transform: rotateX(-90deg) translateZ(3.1em);
+}
+
+.six {
+  transform: rotateY(90deg) translateZ(3.1em);
+}
+
+.dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border-radius: 50%;
+  background-color: #303030;
+  box-shadow: inset 2px 2px #000;
+}
+
+.one-1,
+.three-2,
+.five-5 {
+  top: 50%;
+  left: 50%;
+}
+
+.two-1,
+.three-1,
+.four-1,
+.five-1,
+.six-1 {
+  top: 20%;
+  left: 20%;
+}
+
+.two-2,
+.three-3,
+.four-4,
+.five-4,
+.six-6 {
+  top: 80%;
+  left: 80%;
+}
+
+.three-2,
+.five-5 {
+  top: 50%;
+  left: 50%;
+}
+
+.four-2,
+.five-2,
+.six-3 {
+  top: 80%;
+  left: 20%;
+}
+
+.four-3,
+.five-3,
+.six-4 {
+  top: 20%;
+  left: 80%;
+}
+
+.six-2 {
+  top: 50%;
+  left: 20%;
+}
+
+.six-5 {
+  top: 50%;
+  left: 80%;
+}
+
+// 주사위 애니메이션 효과
+.show1 {
+  transform: rotateX(720deg) rotateZ(-720deg);
+}
+.show2 {
+  transform: rotateX(450deg) rotateZ(-720deg);
+}
+.show3 {
+  transform: rotateY(-450deg) rotateZ(-1440deg);
+}
+.show4 {
+  transform: rotateY(810deg) rotateZ(720deg);
+}
+.show5 {
+  transform: rotateX(-810deg) rotateZ(-1080deg);
+}
+.show6 {
+  transform: rotateX(-900deg) rotateZ(1080deg);
+}
