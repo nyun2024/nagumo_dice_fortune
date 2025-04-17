@@ -7,6 +7,7 @@ import Button from '../../components/common/Button'
 
 const RollingDiceNagumo = () => {
   const [diceClass, setDiceClass] = useState('')
+  const [diceNum, setDiceNum] = useState('')
 
   const rollDice = () => {
     const newNumber = Math.ceil(Math.random() * 6)
@@ -16,17 +17,21 @@ const RollingDiceNagumo = () => {
     setDiceClass('')
     setTimeout(() => {
       setDiceClass(newClass)
-      console.log(newClass)
     }, 10)
+    setTimeout(() => {
+      setDiceNum(newNumber)
+    }, 3700)
   }
 
   return (
-    <Container>
+    <Container center className={styles.diceContainer}>
+      <div className={styles.title}>오늘 너의 행운은?</div>
       <div className={styles.nagumoDiceWrap}>
         <img src={nagumo} className={styles.img} />
         <Dice diceClass={diceClass} className={styles.dice} />
       </div>
-      <Button onClickEvent={rollDice} text={'Rolling Dice'} />
+      <div className={styles.diceNum}>{diceNum}</div>
+      <Button onClickEvent={rollDice} text={'주사위 굴리기'} />
     </Container>
   )
 }

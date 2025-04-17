@@ -1,3 +1,6 @@
+.diceContainer {
+  padding: 60px 0;
+}
 .nagumoDiceWrap {
   position: relative;
 }
@@ -9,4 +12,14 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 16%;
+}
+.title {
+  font-size: 26px;
+  margin-bottom: 26px;
+}
+.diceNum {
+  height: 79px;
+  font-weight: 700;
+  font-size: 56px;
+  margin: 10px 0;
 }
