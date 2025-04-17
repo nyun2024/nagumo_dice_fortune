@@ -216,3 +216,7 @@ select {
 select::-ms-expand {
   display: none;
 }
+
+i {
+  font-weight: 700;
+}

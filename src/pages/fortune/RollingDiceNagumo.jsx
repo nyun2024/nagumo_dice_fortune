@@ -25,6 +25,7 @@ const RollingDiceNagumo = () => {
 
   return (
     <Container center className={styles.diceContainer}>
+      {/* <div className={styles.clover}>냏</div> */}
       <div className={styles.title}>오늘 너의 행운은?</div>
       <div className={styles.nagumoDiceWrap}>
         <img src={nagumo} className={styles.img} />

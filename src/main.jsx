@@ -1,9 +1,6 @@
-import { createRoot } from 'react-dom/client'
+import ReactDOM from 'react-dom/client'
 import './index.css'
-import RollingDiceNagumo from '@pages/fortune/RollingDiceNagumo'
+import { RouterProvider } from 'react-router-dom'
+import router from './router/index.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <>
-    <RollingDiceNagumo />
-  </>,
-)
+ReactDOM.createRoot(document.getElementById('root')).render(<RouterProvider router={router} />)
