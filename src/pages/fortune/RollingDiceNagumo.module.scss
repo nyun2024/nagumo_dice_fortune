@@ -1,0 +1,12 @@
+.nagumoDiceWrap {
+  position: relative;
+}
+.img {
+  width: 100%;
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16%;
+}

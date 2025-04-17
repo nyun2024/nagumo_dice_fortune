@@ -1,72 +1,51 @@
-.rollButton {
-  margin-top: 80px;
-
-  button {
-    padding: 15px 50px;
-    font-size: 20px;
-    color: #fff;
-    background-color: #f4d35e;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 1px 3px #50514f;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover,
-    &:active {
-      background: #50514f;
-      transform: translateY(15px);
-    }
-  }
+.container {
+  perspective: 800vw;
 }
 
 .dice {
-  width: 100px;
-  height: 100px;
+  width: 18vw;
+  height: 18vw;
   position: relative;
   transform-style: preserve-3d;
-  transition: transform 1.5s;
+  transition: transform 3.5s ease-out;
+  backface-visibility: hidden;
+  will-change: transform;
 }
 
 .side {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width: 18vw;
+  height: 18vw;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   border: 1px solid #efefef;
-  box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+  box-shadow: rgba(55, 55, 55, 0.2) -10px 15px 11px -12px;
 }
 
 .one {
-  transform: translateZ(3.1em);
+  transform: translateZ(9vw);
 }
-
 .two {
-  transform: rotateY(-180deg) translateZ(3.1em);
+  transform: rotateY(-180deg) translateZ(9vw);
 }
-
 .three {
-  transform: rotateY(-90deg) translateZ(3.1em);
+  transform: rotateY(-90deg) translateZ(9vw);
 }
-
 .four {
-  transform: rotateX(90deg) translateZ(3.1em);
+  transform: rotateX(90deg) translateZ(9vw);
 }
-
 .five {
-  transform: rotateX(-90deg) translateZ(3.1em);
+  transform: rotateX(-90deg) translateZ(9vw);
 }
-
 .six {
-  transform: rotateY(90deg) translateZ(3.1em);
+  transform: rotateY(90deg) translateZ(9vw);
 }
 
 .dot {
   position: absolute;
-  width: 20px;
-  height: 20px;
-  margin: -10px;
+  width: 3.4vw;
+  height: 3.4vw;
+  margin: -1.75vw;
   border-radius: 50%;
   background-color: #303030;
   box-shadow: inset 2px 2px #000;
@@ -78,71 +57,81 @@
   top: 50%;
   left: 50%;
 }
-
 .two-1,
 .three-1,
 .four-1,
 .five-1,
 .six-1 {
-  top: 20%;
-  left: 20%;
+  top: 23%;
+  left: 23%;
 }
-
 .two-2,
 .three-3,
 .four-4,
 .five-4,
 .six-6 {
-  top: 80%;
-  left: 80%;
+  top: 77%;
+  left: 77%;
 }
-
-.three-2,
-.five-5 {
-  top: 50%;
-  left: 50%;
-}
-
 .four-2,
 .five-2,
 .six-3 {
-  top: 80%;
-  left: 20%;
+  top: 77%;
+  left: 23%;
 }
-
 .four-3,
 .five-3,
 .six-4 {
-  top: 20%;
-  left: 80%;
+  top: 23%;
+  left: 77%;
 }
-
 .six-2 {
   top: 50%;
-  left: 20%;
+  left: 23%;
 }
-
 .six-5 {
   top: 50%;
-  left: 80%;
+  left: 77%;
 }
 
-// 주사위 애니메이션 효과
-.show1 {
-  transform: rotateX(720deg) rotateZ(-720deg);
+.show1a {
+  transform: rotateX(3600deg) rotateZ(-3600deg);
 }
-.show2 {
-  transform: rotateX(450deg) rotateZ(-720deg);
+.show1b {
+  transform: rotateX(5760deg) rotateZ(-3960deg);
 }
-.show3 {
-  transform: rotateY(-450deg) rotateZ(-1440deg);
+
+.show2a {
+  transform: rotateX(-3780deg) rotateZ(2610deg);
 }
-.show4 {
-  transform: rotateY(810deg) rotateZ(720deg);
+.show2b {
+  transform: rotateX(-4141deg) rotateZ(3960deg);
 }
-.show5 {
-  transform: rotateX(-810deg) rotateZ(-1080deg);
+
+.show3a {
+  transform: rotateY(2972deg) rotateZ(3600deg);
 }
-.show6 {
-  transform: rotateX(-900deg) rotateZ(1080deg);
+.show3b {
+  transform: rotateY(4050deg) rotateZ(3960deg);
+}
+
+.show4a {
+  transform: rotateX(-2968deg) rotateZ(-3600deg);
+}
+.show4b {
+  transform: rotateX(-3695deg) rotateZ(-2884deg);
+}
+
+.show5a {
+  transform: rotateX(3871deg) rotateZ(-4499deg);
+}
+.show5b {
+  transform: rotateX(2787deg) rotateZ(-2700deg);
+}
+
+.show6a {
+  transform: rotateY(-4771deg) rotateZ(-4680deg);
+}
+.show6b {
+  transform: rotateY(-5850deg) rotateZ(-5042deg);
 }
