@@ -8,6 +8,7 @@ import Button from '../../components/common/Button'
 const RollingDiceNagumo = () => {
   const [diceClass, setDiceClass] = useState('')
   const [diceNum, setDiceNum] = useState('')
+  const [loaded, setLoaded] = useState(false)
 
   const rollDice = () => {
     const newNumber = Math.ceil(Math.random() * 6)
@@ -24,11 +25,11 @@ const RollingDiceNagumo = () => {
   }
 
   return (
-    <Container center className={styles.diceContainer}>
+    <Container center className={styles.diceContainer} style={{ visibility: loaded ? 'visible' : 'hidden' }}>
       {/* <div className={styles.clover}>냏</div> */}
       <div className={styles.title}>오늘 너의 행운은?</div>
       <div className={styles.nagumoDiceWrap}>
-        <img src={nagumo} className={styles.img} />
+        <img src={nagumo} className={styles.img} onLoad={() => setLoaded(true)} />
         <Dice diceClass={diceClass} className={styles.dice} />
       </div>
       <div className={styles.diceNum}>{diceNum}</div>

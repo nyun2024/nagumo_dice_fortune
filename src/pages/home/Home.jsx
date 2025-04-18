@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Container from '@components/common/Container'
 import styles from './Home.module.scss'
 import nagumo from '@img/home_nagumo.jpg'
 import LinkButton from '@components/common/LinkButton'
 
 const Home = () => {
+  const [loaded, setLoaded] = useState(false)
+
   return (
-    <Container center className={styles.homeContainer}>
+    <Container center className={styles.homeContainer} style={{ visibility: loaded ? 'visible' : 'hidden' }}>
       <h1 className={styles.homeTitle}>
         <span className={styles.nagumo}>나구모의</span>
         <br />
@@ -14,7 +16,7 @@ const Home = () => {
       </h1>
       <p className={styles.nagumoDialogue}>"나는 상냥하니까 오늘의 운을 점쳐줄게~"</p>
       <i className={styles.icon}>렼</i>
-      <img src={nagumo} className={styles.nagumo} />
+      <img src={nagumo} className={styles.nagumo} onLoad={() => setLoaded(true)} />
       <LinkButton href={'/RollingDiceNagumo'} className={styles.linkButton}>
         GO
       </LinkButton>
