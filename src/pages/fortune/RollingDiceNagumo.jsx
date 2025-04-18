@@ -9,6 +9,7 @@ const RollingDiceNagumo = () => {
   const [diceClass, setDiceClass] = useState('')
   const [diceNum, setDiceNum] = useState('')
   const [loaded, setLoaded] = useState(false)
+  const [beforeRollingText, setBeforeRollingText] = useState('click↓')
 
   const rollDice = () => {
     const newNumber = Math.ceil(Math.random() * 6)
@@ -18,6 +19,7 @@ const RollingDiceNagumo = () => {
     setDiceClass('')
     setTimeout(() => {
       setDiceClass(newClass)
+      setBeforeRollingText('얍!')
     }, 10)
     setTimeout(() => {
       setDiceNum(newNumber)
@@ -27,12 +29,12 @@ const RollingDiceNagumo = () => {
   return (
     <Container center className={styles.diceContainer} style={{ visibility: loaded ? 'visible' : 'hidden' }}>
       <div className={styles.title}>오늘 너의 행운은?</div>
+      {diceNum === '' ? <div className={styles.noResultDice}>{beforeRollingText}</div> : <div className={styles.diceNum}>{diceNum}</div>}
       <div className={styles.nagumoDiceWrap}>
         <img src={nagumo} className={styles.img} onLoad={() => setLoaded(true)} />
         <Dice diceClass={diceClass} className={styles.dice} />
       </div>
-      <div className={styles.diceNum}>{diceNum}</div>
-      <Button onClickEvent={rollDice} text={'주사위 굴리기'} />
+      <Button className={styles.button} onClickEvent={rollDice} text={'주사위 굴리기'} />
     </Container>
   )
 }
