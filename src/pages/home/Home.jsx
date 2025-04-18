@@ -11,13 +11,12 @@ const Home = () => {
         <span className={styles.nagumo}>나구모의</span>
         <br />
         주사위 <span className={styles.luck}>행운점</span>
-        <br />
-        <i className={styles.icon}>렼</i>
       </h1>
+      <p className={styles.nagumoDialogue}>"나는 상냥하니까 오늘의 운을 점쳐줄게~"</p>
+      <i className={styles.icon}>렼</i>
       <img src={nagumo} className={styles.nagumo} />
-      <p>나는 상냥하니까 오늘의 운을 점쳐줄게~</p>
       <LinkButton href={'/RollingDiceNagumo'} className={styles.linkButton}>
-        GO<i>줐</i>
+        GO
       </LinkButton>
     </Container>
   )

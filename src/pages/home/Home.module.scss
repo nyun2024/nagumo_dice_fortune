@@ -9,15 +9,21 @@
   .luck {
     font-weight: 700;
   }
-  .icon {
-    font-size: 50px;
-    display: inline-block;
-    margin: 10px 0 0;
-  }
+}
+.icon {
+  font-size: 50px;
+  display: inline-block;
+  margin: 26px 0 0;
+  line-height: 30px;
 }
 
 .nagumo {
   width: 100%;
+}
+
+.nagumoDialogue {
+  font-size: 17px;
+  margin-top: 18px;
 }
 
 .linkButton {
