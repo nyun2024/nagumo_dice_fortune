@@ -21,6 +21,10 @@ export default defineConfig({
         find: '@img',
         replacement: path.resolve(__dirname, 'src/assets/img'),
       },
+      {
+        find: '@data',
+        replacement: path.resolve(__dirname, 'src/data'),
+      },
     ],
   },
   base: '/nagumo_dice_fortune/',
