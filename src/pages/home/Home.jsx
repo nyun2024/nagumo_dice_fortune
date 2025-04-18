@@ -15,6 +15,7 @@ const Home = () => {
         <i className={styles.icon}>렼</i>
       </h1>
       <img src={nagumo} className={styles.nagumo} />
+      <p>나는 상냥하니까 오늘의 운을 점쳐줄게~</p>
       <LinkButton href={'/RollingDiceNagumo'} className={styles.linkButton}>
         GO<i>줐</i>
       </LinkButton>

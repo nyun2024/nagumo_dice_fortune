@@ -43,9 +43,9 @@
 
 .dot {
   position: absolute;
-  width: 3.4vw;
-  height: 3.4vw;
-  margin: -1.75vw;
+  width: 3.3vw;
+  height: 3.3vw;
+  margin: -1.65vw;
   border-radius: 50%;
   background-color: #303030;
   box-shadow: inset 2px 2px #000;
@@ -134,4 +134,38 @@
 }
 .show6b {
   transform: rotateY(-5850deg) rotateZ(-5042deg);
+}
+
+@media (min-width: 500px) {
+  .dice {
+    width: 80px;
+    height: 80px;
+  }
+  .side {
+    width: 80px;
+    height: 80px;
+  }
+  .one {
+    transform: translateZ(40px);
+  }
+  .two {
+    transform: rotateY(-180deg) translateZ(40px);
+  }
+  .three {
+    transform: rotateY(-90deg) translateZ(40px);
+  }
+  .four {
+    transform: rotateX(90deg) translateZ(40px);
+  }
+  .five {
+    transform: rotateX(-90deg) translateZ(40px);
+  }
+  .six {
+    transform: rotateY(90deg) translateZ(40px);
+  }
+  .dot {
+    width: 14px;
+    height: 14px;
+    margin: -7px;
+  }
 }
